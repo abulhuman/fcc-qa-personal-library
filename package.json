@@ -5,6 +5,7 @@
 	"main": "server.js",
 	"module": "commonjs",
 	"scripts": {
+		"postinstall": "node __log-ip.js",
 		"start": "node server.js",
 		"test": "mocha --timeout 10000 --recursive --exit --ui tdd tests/",
 		"seed": "node seed.js",
