@@ -77,11 +77,11 @@ const commentsCount = bookSeedData.reduce(
 );
 
 (async () => {
-  for (book of bookSeedData) {
+  for (const book of bookSeedData) {
     const seededBook = await new Book({ title: book.title }).save();
     console.log('Seeding Book: ', seededBook.title);
     const bookId = seededBook?._id;
-    for (comment of book.comments) {
+    for (const comment of book.comments) {
       const updatedBook = await Book.findByIdAndUpdate(
         bookId,
         { $push: { comments: comment } },

@@ -518,7 +518,7 @@ suite('Hints', () => {
   //       assert.isArray(tests);
   //       assert.isAtLeast(tests.length, 10, 'At least 10 tests passed');
   //       let testIndex = 0;
-  //       for (_test of tests) {
+  //       for (const _test of tests) {
   //         assert.equal(_test.state, 'passed', 'Test in Passed State');
   //         assert.isAtLeast(
   //           _test.assertions.length,
