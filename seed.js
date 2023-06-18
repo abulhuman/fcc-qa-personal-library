@@ -109,7 +109,10 @@ const commentsCount = bookSeedData.reduce(
     createdCommentCount,
     commentsCount
   );
-  if (createdBookCount === booksCount && createdCommentCount === commentsCount)
+  if (
+    createdBookCount === booksCount + 1 &&
+    createdCommentCount === commentsCount
+  )
     process.kill(process.pid, 'SIGTERM');
 })();
 

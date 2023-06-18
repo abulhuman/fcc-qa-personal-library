@@ -8,8 +8,7 @@
 		"start": "node server.js",
 		"test": "mocha --timeout 10000 --recursive --exit --ui tdd tests/",
 		"seed": "node seed.js",
-		"pretest": "npm run seed",
-		"prestart": "npm run seed"
+		"pretest": "npm run seed"
 	},
 	"dependencies": {
 		"body-parser": "^1.15.2",

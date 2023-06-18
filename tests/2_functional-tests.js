@@ -496,6 +496,19 @@ suite('Hints', () => {
     }
   });
 
+  after((done) => {
+    try {
+      openRequest
+        .post('/api/books')
+        .send({ title: '(Always There) Test Book' })
+        .end(done);
+    } catch (error) {
+      clg('error: ', error);
+      done(error);
+    }
+  });
+
+
   // All 10 functional tests required are complete and passing.
   // test(`H-7. All 10 functional tests required are complete and passing.`, (done) => {
   //   try {
