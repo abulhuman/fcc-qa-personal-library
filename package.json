@@ -3,8 +3,13 @@
 	"version": "1.0.0",
 	"description": "boilerplate",
 	"main": "server.js",
+	"module": "commonjs",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node server.js",
+		"test": "mocha --timeout 10000 --recursive --exit --ui tdd tests/",
+		"seed": "node seed.js",
+		"pretest": "npm run seed",
+		"prestart": "npm run seed"
 	},
 	"dependencies": {
 		"body-parser": "^1.15.2",
@@ -14,6 +19,8 @@
 		"dotenv": "^8.2.0",
 		"express": "^4.14.0",
 		"mocha": "^3.2.0",
+		"mongodb": "^5.6.0",
+		"mongoose": "^7.3.0",
 		"zombie": "^5.0.5"
 	},
 	"repository": {
